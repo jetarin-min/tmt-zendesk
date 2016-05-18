@@ -1,0 +1,51 @@
+<section class="clearfix">
+  <div class="knowledge-base">
+    <h1 align="center">Welcome to TakeMeTour's Help Center</h1>
+    <img src="http://blog.takemetour.com/wp-content/uploads/2016/03/hc-banner-01.png" alt="takemetour" align="middle" style="width: 100%">
+    <h2 align="center">Find Your Answers of Traveling Here</h2>
+    <ul class="category-list">
+      {{#each categories}}
+        <li>
+          <a href="{{url}}" class="category-link">
+            <div class="animation">
+              <div class="item1-{{name}}"></div>
+              <div class="item2-{{name}}"></div>
+              <div class="item3-{{name}}"></div>
+            </div>
+            {{name}}
+          </a>
+        </li>
+      {{/each}}
+
+      {{pagination}}
+    </ul>
+    {{#if promoted_articles}}
+      <section class="promoted-articles">
+        <!--
+        <h3>{{t 'promoted_articles'}}</h3>
+        <ul>
+          {{#each promoted_articles}}
+            <li>
+              <a href="{{url}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+        -->
+      </section>
+    {{/if}}
+
+  </div>
+  <!--
+  <div class="community">
+    {{#if help_center.community_enabled}}
+      <h4>
+        {{t 'community'}}
+        {{#link 'community'}}
+          {{t 'browse'}}
+        {{/link}}
+      </h4>
+    {{/if}}
+    {{recent_activity scope='community'}}
+  </div>
+  -->
+</section>
